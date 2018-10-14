@@ -1,0 +1,19 @@
+{%  extends "layout.html" %}
+
+{% block heading %}
+    Register
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for('register')}}" method="post">
+        <span>Login:</span>
+        <input type="text" name="login">
+        <br>
+        <span>Password:</span>
+        <input type="password" name="password">
+        <br>
+        <button>Register</button>
+    </form>
+
+    <a href="{{ url_for("index") }}">Back</a>
+{% endblock %}

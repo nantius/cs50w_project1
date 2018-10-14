@@ -1,0 +1,19 @@
+{%  extends "layout.html" %}
+
+{% block heading %}
+
+{% endblock %}
+
+{% block body %}
+    {% if not session['user'] %}
+        <button class="btn btn-outline-primary my-2">
+            <a href="{{ url_for("login") }}">Login</a>
+        </button>
+        <button class="btn btn-outline-primary my-2">
+            <a href="{{ url_for("register") }}">Register</a>
+        </button>
+        <br>
+    {% else %}
+        <a href="{{ url_for("search") }}">Search</a>
+    {% endif %}
+{% endblock %}
